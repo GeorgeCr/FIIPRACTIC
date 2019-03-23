@@ -8,8 +8,8 @@ ul {
     padding: 10px;
     a {
       text-decoration: none;
+    }
   }
-}
 }
 header {
   width: 1200px;
@@ -29,14 +29,31 @@ nav {
       color: black;
       &:hover {
         text-decoration: underline;
-    }
+      }
       &:active {
         text-decoration: underline;
+      }
     }
   }
-}
+  .account {
+    display: flex;
+    justify-content: center;
+  }
   .navigation {
     display: flex;
     align-items: center;
+  }
 }
+
+.menuClass {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  &:hover {
+    background-color: #373f52;
+    color: white;
+    transition: all 300ms ease;
+  }
 }

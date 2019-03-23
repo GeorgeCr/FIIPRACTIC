@@ -10,6 +10,12 @@ import { MainComponent } from './presentation/components/main/main.component';
 import { CategoryComponent } from './presentation/components/category/category.component';
 import { CategoryTitleComponent } from './presentation/components/category/category-title/category-title.component';
 import { CategoryTrainersComponent } from './presentation/components/category/category-trainers/category-trainers.component';
+import { MatMenuModule, MatIconModule, MatInputModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountFormComponent } from './accounts/components/account-form/account-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './shared/components/search/search.component';
 
 
 @NgModule({
@@ -22,12 +28,25 @@ import { CategoryTrainersComponent } from './presentation/components/category/ca
     CategoryComponent,
     CategoryTitleComponent,
     CategoryTrainersComponent,
+    AccountFormComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatMenuModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    MatIconModule,
+    MatMenuModule
+  ]
 })
 export class AppModule { }

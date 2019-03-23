@@ -8,7 +8,7 @@ import { PresentationDetails } from '../../interfaces/presentation-details';
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit {
-  presentationData: PresentationDetails;
+  presentationData: PresentationDetails = { startDate: '', endDate: '', title: '', description: ''};
 
   constructor(private presentationDetailsService: PresentationDetailsService) { }
 
@@ -16,6 +16,9 @@ export class PresentationComponent implements OnInit {
     this.getPresentationData();
   }
   getPresentationData(): void {
-    this.presentationData = this.presentationDetailsService.getPresentationDetails();
+    // this.presentationData = this.presentationDetailsService.getPresentationDetails();
+    this.presentationDetailsService.getPresentationDetails().subscribe(data => {
+      this.presentationData = data;
+    })
   }
 }

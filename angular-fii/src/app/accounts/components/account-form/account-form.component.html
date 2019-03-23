@@ -1,0 +1,34 @@
+<div class="form-wrapper">
+    <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" class="form-control" id="email" required placeholder="Email" name="email" ngModel [(ngModel)]="account.email" #email="ngModel">
+            <mat-error *ngIf="!email.valid">Please insert email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Nume</mat-label>
+            <input matInput type="text" class="form-control" id="name" required placeholder="Nume" name="nume" ngModel [(ngModel)]="account.nume">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Prenume</mat-label>
+            <input matInput type="text" class="form-control" id="surname" required placeholder="Prenume" name="prenume" ngModel [(ngModel)]="account.prenume">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Linkedin</mat-label>
+            <input matInput type="text" class="form-control" id="linkedin" placeholder="Linkedin" name="linkedin" ngModel [(ngModel)]="account.linkedin"> 
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefon</mat-label>
+            <input matInput type="text" class="form-control" id="phone" placeholder="Telefon" name="phone" ngModel [(ngModel)]="account.phone">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Scoala/Facultate</mat-label>
+            <input matInput type="text" class="form-control" id="school" placeholder="Scoala/Facultate" name="school" ngModel [(ngModel)]="account.school">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Adresa</mat-label>
+            <input matInput type="text" class="form-control" id="adress" placeholder="Adresa" name="adress" ngModel [(ngModel)]="account.address">
+        </mat-form-field>
+        <button [disabled]="!accountForm.valid">Submit</button>
+    </form>
+</div>

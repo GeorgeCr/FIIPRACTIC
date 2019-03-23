@@ -1,5 +1,6 @@
 <div class="main-arias">
-  <div *ngFor="let aria of arias"
+  <app-search (sendRes)="getResponse($event)"></app-search>
+  <div *ngFor="let aria of filteredArias"
        [routerLink]="['/category', aria.category]"
         routerLinkActive="active"
        class="single-aria-container"
