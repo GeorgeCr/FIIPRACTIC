@@ -1,0 +1,4 @@
+<div class="wrapper-category" *ngFor="let aria of arias">
+  <app-category-title [ariaInput]="aria"></app-category-title>
+  <app-category-trainers [trainersInput]="trainers" [ariaDescription]="aria.longDescription"></app-category-trainers>
+</div>
